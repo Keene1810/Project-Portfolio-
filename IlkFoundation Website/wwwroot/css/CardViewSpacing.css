@@ -1,0 +1,15 @@
+﻿
+.navbar {
+    min-height: 60px;
+    max-height: 75px; /* Ensure a minimum height for the navbar */
+}
+
+/* Add extra margin to the top of the body or container */
+body {
+    margin-top: 80px; /* Adjust the space above the content to ensure the navbar doesn't overlap */
+}
+
+/* Alternatively, you can add a larger margin-top to the h1 element */
+h1 {
+    margin-top: 80px; /* This will give extra space between the navbar and the header */
+}

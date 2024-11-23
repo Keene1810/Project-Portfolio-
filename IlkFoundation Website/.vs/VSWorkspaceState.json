@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Admin",
+    "\\Data",
+    "\\Data\\Migrations",
+    "\\Views",
+    "\\Views\\Shared",
+    "\\Views\\Volunteers"
+  ],
+  "SelectedNode": "\\Views\\Shared\\_LoginPartial.cshtml",
+  "PreviewInSolutionExplorer": false
+}

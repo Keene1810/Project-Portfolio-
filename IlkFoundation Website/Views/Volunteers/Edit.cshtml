@@ -1,0 +1,176 @@
+﻿@model test_ngo.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Edit Volunteer";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            padding-top: 80px; /* Adjust for header or navbar */
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            box-shadow: none;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+            }
+
+        .form-group label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-secondary {
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+            }
+
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .card-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .validation-summary {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Edit Volunteer
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="validation-summary mb-3"></div>
+                    <input type="hidden" asp-for="VolunteerID" />
+
+                    <div class="form-group">
+                        <label asp-for="UserID" class="control-label">UserID</label>
+                        <input asp-for="UserID" class="form-control" />
+                        <span asp-validation-for="UserID" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="EventID" class="control-label">EventID</label>
+                        <input asp-for="EventID" class="form-control" />
+                        <span asp-validation-for="EventID" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VolunteerName" class="control-label">Name</label>
+                        <input asp-for="VolunteerName" class="form-control" />
+                        <span asp-validation-for="VolunteerName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VolunteerSurname" class="control-label">Surname</label>
+                        <input asp-for="VolunteerSurname" class="form-control" />
+                        <span asp-validation-for="VolunteerSurname" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VolunteerEmail" class="control-label">Email</label>
+                        <input asp-for="VolunteerEmail" class="form-control" />
+                        <span asp-validation-for="VolunteerEmail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Feedback" class="control-label">Feedback</label>
+                        <input asp-for="Feedback" class="form-control" />
+                        <span asp-validation-for="Feedback" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Status" class="control-label">Status</label>
+                        <input asp-for="Status" class="form-control" />
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-3 text-center">
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

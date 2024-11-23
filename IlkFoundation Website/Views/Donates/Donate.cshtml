@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Donate</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        background-color: #ff6961;
+    }
+
+    .p1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 540;
+        text-align: center;
+        width: 800px;
+        font-size: 25px;
+        margin: 0 auto;
+    }
+
+    .donation-card {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 10px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        margin-left: 22px;
+        margin-right: 20px;
+        width: 100%;
+        height: 550px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+        .donation-card img {
+            height: 445px;
+            padding: 10px;
+            width: 50%;
+            margin-left: 40px;
+        }
+
+    .card-details p {
+        text-align: left;
+        width: 470px;
+        margin-left: 20px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        margin-left: 20px;
+        color: #ff6961;
+    }
+
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-weight: 545;
+        width: 350px;
+    }
+
+    .donate-button {
+        font-family: 'Poppins', 'sans-serif';
+        background-color: #000000;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition-duration: 0.4s;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 200px;
+    }
+
+        .donate-button:hover {
+            background-color: #ff6961;
+            color: white;
+        }
+
+    /* Update modal styling */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        width: 85%; /* Increased width */
+        max-width: 500px; /* Increased max width */
+        margin: 5% auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative; /* Allows positioning of close button */
+    }
+
+        .modal-content h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal-content .donate-button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+            /* Style for each donation option button */
+            .modal-content .donate-button#viewDonatePopup {
+                background-color: #ff6961;
+                color: white;
+            }
+
+                .modal-content .donate-button#viewDonatePopup:hover {
+                    background-color: #e0554b;
+                }
+
+            .modal-content .donate-button#donateWithZapper {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+                .modal-content .donate-button#donateWithZapper:hover {
+                    background-color: #45a049;
+                }
+
+    /* Style close button */
+    .close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px; /* Position close button at the top */
+        left: 10px; /* Position close button on the left */
+        cursor: pointer;
+    }
+
+        .close:hover, .close:focus {
+            color: black;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="donation-card">
+        <img src="~/css/images/donate_image.jpg" alt="Image">
+        <div class="card-details">
+            <h2>Donate Today</h2>
+            <h3>Together, We Can Achieve More.</h3>
+            <p class="p1">
+                Your donation directly funds our organization's mission, enabling us to continue our vital work without interruptions. Whether it's providing educational resources for our ECD, supporting our soup kitchen, or sowing the seeds of hope in our community garden, your contribution goes straight to the heart of what we do.
+            </p>
+            <button id="donateButton" type="button" class="donate-button">Donate</button>
+        </div>
+    </div>
+
+    <!-- Modal Structure for popup -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <h5>Choose a Donation Option</h5>
+                <button id="viewDonatePopup" class="donate-button" style="width: 100%;">View Banking Details</button>
+                <button id="donateWithZapper" class="donate-button" style="width: 100%; background-color: #4CAF50;">Donate with Zapper</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for entering amount -->
+    <div id="donationAmountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h5>Enter Donation Amount</h5>
+            <input type="number" id="donationAmount" class="form-control" placeholder="Enter amount in ZAR" required>
+            <button id="submitAmount" class="donate-button" style="width: 100%; background-color: #4CAF50;">Donate Now</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("myModal");
+            var donateButton = document.getElementById("donateButton");
+            var donationAmountModal = document.getElementById("donationAmountModal");
+            var donationAmountInput = document.getElementById("donationAmount");
+            var submitAmountButton = document.getElementById("submitAmount");
+            var span = document.getElementsByClassName("close");
+
+
+
+            // Store initial content of modal
+            const initialModalContent = document.getElementById("modalBody").innerHTML;
+
+            // Function to reset modal content
+            function resetModalContent() {
+                document.getElementById("modalBody").innerHTML = initialModalContent;
+                attachModalButtonEvents();  // Reattach events after resetting content
+            }
+
+            // Function to attach event listeners to modal buttons
+            function attachModalButtonEvents() {
+                // View Donate Popup button
+                const viewDonatePopup = document.getElementById("viewDonatePopup");
+                if (viewDonatePopup) {
+                    viewDonatePopup.onclick = function () {
+                        fetch('/Donates/DonatePopup')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById("modalBody").innerHTML = data;
+                            })
+                            .catch(error => console.error('Error loading content:', error));
+                    };
+                }
+
+                // Donate with Zapper button
+                const donateWithZapper = document.getElementById("donateWithZapper");
+                if (donateWithZapper) {
+                    donateWithZapper.onclick = function () {
+                        modal.style.display = "none";
+                        donationAmountModal.style.display = "block";
+                    };
+                }
+            }
+
+            // Open main donation modal on 'Donate' button click
+            donateButton.onclick = function () {
+                modal.style.display = "block";
+                resetModalContent();  // Reset content each time modal is opened
+            };
+
+            // Close modal when clicking outside of it
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                } else if (event.target === donationAmountModal) {
+                    donationAmountModal.style.display = "none";
+                }
+            };
+
+            // Close modal on 'X' click
+            Array.from(span).forEach(closeButton => {
+                closeButton.onclick = function () {
+                    closeModal();
+                    donationAmountModal.style.display = "none";
+                };
+            });
+
+            // Submit donation amount
+            submitAmountButton.onclick = function () {
+                var amount = donationAmountInput.value;
+                if (amount && amount > 0) {
+                    window.location.href = `/Donates/DonateWithZapper?amount=${amount}`;
+                } else {
+                    alert("Please enter a valid amount.");
+                }
+            };
+
+            // Close modal and reset its content
+            function closeModal() {
+                modal.style.display = "none";
+                resetModalContent();  // Reset content each time modal is closed
+            }
+
+            // Initial call to attach event listeners
+            attachModalButtonEvents();
+        });
+    </script>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

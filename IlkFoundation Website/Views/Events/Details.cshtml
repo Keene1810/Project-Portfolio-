@@ -1,0 +1,58 @@
+﻿@model test_ngo.Models.Event
+
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<!-- Include Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Include Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="~/css/detailviews.css" rel="stylesheet" />
+
+<div class="container">
+    <!-- Event Details Card -->
+    <div class="card card-container">
+        <div class="card-header">
+            <strong>Event Details</strong>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Event Name:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.EventName)</dd>
+
+                <dt class="col-sm-3">Event Date:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.EventDate)</dd>
+
+                <dt class="col-sm-3">Location:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.EventLocation)</dd>
+
+                <dt class="col-sm-3">Description:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+
+                <dt class="col-sm-3">Image:</dt>
+                <dd class="col-sm-9 event-image-container">
+                    @if (Model.ImageData != null && Model.ImageData.Length > 0)
+                    {
+                        string imageBase64 = Convert.ToBase64String(Model.ImageData);
+                        string imageSrc = $"data:image;base64,{imageBase64}";
+                        <img src="@imageSrc" alt="Event Image" class="img-thumbnail" width="250" height="auto" />
+                    }
+                    else
+                    {
+                        <span>No Image Available</span>
+                    }
+                </dd>
+            </dl>
+            <!-- Action Buttons -->
+            <div class="mt-4">
+                <a asp-action="Edit" asp-route-id="@Model?.EventID" class="btn btn-action btn-action-edit">Edit</a>
+                <a asp-action="Index" class="btn btn-action btn-action-back">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

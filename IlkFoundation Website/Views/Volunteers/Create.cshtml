@@ -1,0 +1,82 @@
+﻿@model test_ngo.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding-top: 70px; /* Adjust this value to the height of your navbar */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5 pt-5">
+        <h1>Volunteer Application Form</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    @* HIDDEN FIELDS, DO NOT MAKE UNHIDDEN *@
+                    <input asp-for="UserID" type="hidden" value="@Model.UserID" />
+                    <input asp-for="EventID" type="hidden" value="0" />
+                    <input asp-for="Status" type="hidden" value="Pending" />
+                    <input asp-for="Feedback" type="hidden" value="NULL" />
+
+                    <div class="form-group">
+                        <label asp-for="VolunteerName" class="control-label">Name</label>
+                        <input asp-for="VolunteerName" class="form-control" />
+                        <span asp-validation-for="VolunteerName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VolunteerSurname" class="control-label">Surname</label>
+                        <input asp-for="VolunteerSurname" class="form-control" />
+                        <span asp-validation-for="VolunteerSurname" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VolunteerEmail" class="control-label">Email</label>
+                        <input asp-for="VolunteerEmail" class="form-control" />
+                        <span asp-validation-for="VolunteerEmail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Apply</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mt-3">
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

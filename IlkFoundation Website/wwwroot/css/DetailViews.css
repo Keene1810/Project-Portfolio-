@@ -1,0 +1,86 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+.navbar {
+    min-height: 60px;
+    max-height: 75px;
+}
+
+.card-container {
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+    .card-body dt {
+        font-weight: 600;
+        color: #555;
+    }
+
+    .card-body dd {
+        font-weight: 400;
+        color: #333;
+    }
+
+.img-thumbnail {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action-edit {
+    background-color: #007bff;
+    color: white;
+}
+
+    .btn-action-edit:hover {
+        background-color: #0056b3;
+    }
+
+.btn-action-back {
+    background-color: #6c757d;
+    color: white;
+}
+
+    .btn-action-back:hover {
+        background-color: #5a6268;
+    }
+
+.event-image-container {
+    margin-top: 20px;
+}
+
+.event-link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+    .event-link:hover {
+        text-decoration: underline;
+    }
+
+.navbar {
+    min-height: 60px;
+    max-height: 75px; /* Ensure a minimum height for the navbar */
+}

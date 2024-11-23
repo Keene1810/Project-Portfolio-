@@ -1,0 +1,47 @@
+﻿@model test_ngo.Models.PastEvents
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link href="~/css/detailviews.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="card card-container">
+        <div class="card-header">
+            <strong>Past Event Details</strong>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Title:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Title)</dd>
+
+                <dt class="col-sm-3">Description:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+
+                <dt class="col-sm-3">Event Date:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.EventDate)</dd>
+
+                <dt class="col-sm-3">Image:</dt>
+                <dd class="col-sm-9 event-image-container">
+                    @if (Model.ImageData != null && Model.ImageData.Length > 0)
+                    {
+                        string imageBase64 = Convert.ToBase64String(Model.ImageData);
+                        string imageSrc = $"data:image;base64,{imageBase64}";
+                        <img src="@imageSrc" alt="Event Image" class="img-thumbnail" width="200" height="300" />
+                    }
+                    else
+                    {
+                        <span>No Image Available</span>
+                    }
+                </dd>
+            </dl>
+            <div class="mt-4">
+                <a asp-action="Edit" asp-route-id="@Model?.EventId" class="btn btn-action btn-action-edit">Edit</a>
+                <a asp-action="Index" class="btn btn-action btn-action-back">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>

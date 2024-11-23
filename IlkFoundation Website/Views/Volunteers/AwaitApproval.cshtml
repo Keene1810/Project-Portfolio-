@@ -1,0 +1,88 @@
+﻿@model test_ngo.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Application Submitted Successfully";
+}
+
+<style>
+    .navbar {
+        min-height: 60px;
+        max-height: 75px; /* Ensure a minimum height for the navbar */
+    }
+
+    /* Ensure navbar doesn't overlap with the content */
+    body {
+        margin-top: 100px; /* Adjust top margin to prevent overlap */
+    }
+
+    /* Style for the main heading */
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #000; /* Black color for the heading */
+        margin-bottom: 1rem;
+    }
+
+    /* Style for the paragraph text */
+    p {
+        font-size: 1.25rem;
+        color: #000; /* Black color for text */
+        margin-bottom: 2rem;
+    }
+
+    /* Card container */
+    .card-container {
+        margin-top: 30px;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #fff; /* White background for the card */
+    }
+
+    /* Style for the continue button */
+    .btn-primary {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 15px;
+        font-size: 1.125rem;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff; /* Blue button color */
+        color: white; /* White text for the button */
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    /* Card Header */
+    .card-header {
+        background-color: #fff; /* White background for the header */
+        color: #000; /* Black color for the text in the header */
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 15px 15px 0 0;
+        border-bottom: 1px solid #ddd; /* Light border for separation */
+    }
+
+    /* Card Body */
+    .card-body {
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+    <!-- Card for success message -->
+    <div class="card card-container">
+        <div class="card-header">
+            @ViewData["Title"]
+        </div>
+        <div class="card-body">
+            <p>Your volunteer application has been submitted successfully. Your application will be reviewed soon. Please await approval.</p>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Continue</a>
+        </div>
+    </div>
+</div>

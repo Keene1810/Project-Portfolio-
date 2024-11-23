@@ -1,0 +1,41 @@
+﻿/* General layout adjustments */
+.pe {
+    margin-top: 8em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Image size adjustment */
+.table img {
+    max-width: 100px;
+    height: auto;
+    object-fit: cover; /* Keeps the image proportions while filling space */
+}
+
+/* Button styles */
+.btn-create {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+    .btn-create:hover {
+        background-color: #0056b3;
+        text-decoration: none;
+    }
+
+/* Table styling */
+table {
+    width: 100%;
+    table-layout: auto; /* Ensures the table uses available space */
+}
+
+/* Ensures consistent size for the navbar */
+.navbar {
+    min-height: 60px;
+    max-height: 75px; /* Ensure a minimum height for the navbar */
+}
