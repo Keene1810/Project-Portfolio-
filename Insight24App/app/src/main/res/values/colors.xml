@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple">#593c8f</color>
+    <color name="yellow">#FFC000</color>
+    <color name="dim_gray">#696969</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="mainRed">#ff5757</color>
+</resources>

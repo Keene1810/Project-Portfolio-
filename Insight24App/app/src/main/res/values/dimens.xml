@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimens_4">4dp</dimen>
+    <dimen name="dimens_8">8dp</dimen>
+    <dimen name="dimens_16">16dp</dimen>
+    <dimen name="dimens_24">24dp</dimen>
+    <dimen name="dimens_32">32dp</dimen>
+    <dimen name="dimens_90">90dp</dimen>
+    <dimen name="dimens_100">100dp</dimen>
+    <dimen name="dimens_160">160dp</dimen>
+
+    <dimen name="font_xsmall">10sp</dimen>
+    <dimen name="font_small">16sp</dimen>
+    <dimen name="font_medium">24sp</dimen>
+    <dimen name="font_large">32sp</dimen>
+</resources>

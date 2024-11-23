@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parent_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_16"
+        app:cardCornerRadius="@dimen/dimens_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_16"
+            app:layout_constraintEnd_toEndOf="@id/parent_card"
+            app:layout_constraintStart_toStartOf="@id/parent_card"
+            app:layout_constraintTop_toTopOf="@+id/parent_card">
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gainsboro"
+                android:textSize="@dimen/font_small"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Source" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_4"
+                android:textSize="@dimen/font_xsmall"
+                app:layout_constraintStart_toStartOf="@+id/source"
+                app:layout_constraintTop_toBottomOf="@+id/source"
+                tools:text="Date" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_160"
+                android:layout_marginTop="@dimen/dimens_4"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/dimens_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_160"
+                    android:layout_marginTop="@dimen/dimens_8"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/image" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_8"
+                android:maxLines="2"
+                android:textColor="@color/gainsboro"
+                android:textSize="@dimen/font_small"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/image_card"
+                app:layout_constraintTop_toBottomOf="@+id/image_card"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_4"
+                android:maxLines="2"
+                android:textColor="@color/gainsboro"
+                android:textSize="@dimen/font_xsmall"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/description2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_4"
+                android:maxLines="2"
+                android:textColor="@color/gainsboro"
+                android:textSize="@dimen/font_xsmall"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Description" />
+
+            <ImageButton
+                android:id="@+id/removeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_8"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/remove_article"
+                android:src="@drawable/baseline_remove_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

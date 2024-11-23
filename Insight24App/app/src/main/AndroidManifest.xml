@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/landing"
+        android:label="@string/insight24"
+        android:roundIcon="@drawable/landing"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Insight24App"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.activity.Offline"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.Register"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.Login"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.NewsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

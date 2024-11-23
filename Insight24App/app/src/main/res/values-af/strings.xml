@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Insight24App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hallo leë fragment</string>
+
+    <string name="fab_content_description">Artikel drywende aksieknoppie</string>
+
+    <string name="favourites_title">Gunstelinge</string>
+    <string name="headlines_title">Opskrifte</string>
+    <string name="search_title">Opskrifte</string>
+
+    <string name="search_news">Soek nuus</string>
+
+    <string name="retry">probeer weer</string>
+    <string name="error_no_internet_connection">Geen internet konneksie nie</string>
+    <string name="not_yet_registered_sign_up_now">Nog nie geregistreer nie\? Registreer nou</string>
+
+    <string name="client_id">967064434228-mkoo1gvq24jk32he0icum9vk7mc0vd6i.apps.googleusercontent.com</string>
+    <string name="dark_mode">Donker modus</string>
+    <string name="remove_article">Verwyder artikel</string>
+    <string name="already_have_an_account_sign_in">Het jy reeds \'n rekening\? Meld aan</string>
+    <string name="select_language">Kies Taal</string>
+    <string name="insight24">Insig24</string>
+</resources>

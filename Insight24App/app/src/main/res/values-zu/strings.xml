@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">I-Insight24App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Sawubona isiqeshana esingenalutho</string>
+
+    <string name="fab_content_description">Inkinobho yesenzo esintantayo se-athikili</string>
+
+    <string name="favourites_title">Izintandokazi</string>
+    <string name="headlines_title">Izihloko zezindaba</string>
+    <string name="search_title">Izihloko zezindaba</string>
+
+    <string name="search_news">Sesha izindaba</string>
+
+    <string name="retry">zama futhi</string>
+    <string name="error_no_internet_connection">Alukho uxhumano lwe-inthanethi</string>
+    <string name="not_yet_registered_sign_up_now">Awukabhaliswa\? Bhalisa Manje</string>
+
+    <string name="client_id">967064434228-mkoo1gvq24jk32he0icum9vk7mc0vd6i.apps.googleusercontent.com</string>
+    <string name="dark_mode">Imodi Emnyama</string>
+    <string name="remove_article">Susa i-athikili</string>
+    <string name="already_have_an_account_sign_in">Usuvele unayo i-akhawunti\? Ngena ngemvume</string>
+    <string name="select_language">Khetha Ulimi</string>
+    <string name="insight24">Ukuqonda24</string>
+</resources>
