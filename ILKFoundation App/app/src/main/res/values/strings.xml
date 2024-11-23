@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ILK Foundation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="i_l_k_foundation_was_born_from_the_resilient_and_tenacious_spirit_of_the_women_and_children_of_khumbane">I L K Foundation was born from the resilient and tenacious spirit of the women and children of Khumbane</string>
+    <string name="about_us">About Us</string>
+    <string name="donate">Donate</string>
+    <string name="help_us_out_by_donating_now">Help us out by donating now</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="volunteer_now_to_make_a_difference">Volunteer now to make a difference.</string>
+    <string name="sponsor">Sponsor</string>
+    <string name="sponsor_us_now_to_help_us_grow">Sponsor us now to help us grow.</string>
+    <string name="our_causes">OUR CAUSES</string>
+    <string name="the_main_reasons_we_do_what_we_do">The main reasons we do what we do:</string>
+    <string name="feed_people_that_are_less_fortunate">Feed people that are less fortunate</string>
+    <string name="it_is_a_moral_imperative_to_nfeed_hungry_homeless_people">It is a moral imperative to\nfeed hungry homeless people.</string>
+    <string name="spread_love_and_positivity">Spread love and positivity</string>
+    <string name="compassion_can_open_doors_to_nrecovery_and_a_healthier_future_for_all">Compassion can open doors to\nrecovery and a healthier future for all</string>
+    <string name="light_up_people_s_lives">Light up people\'s lives</string>
+    <string name="it_benefits_all_of_us_to_break_the_ncycle_of_homelessness_one_nperson_one_family_at_a_time">It benefits all of us to break the \ncycle of homelessness one\nperson, one family at a time.</string>
+    <string name="for_any_inquiries_please_contact_us_at_nvolunteer_ilkfoundation_com">For any inquiries, please contact us at\nvolunteer@ilkfoundation.com</string>
+    <string name="mastercard">Mastercard</string>
+    <string name="visa">Visa</string>
+    <string name="zapper">Zapper</string>
+    <string name="donate_anonymously">Donate Anonymously</string>
+    <string name="enter_the_amount_zar">Enter the amount (ZAR)</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="donate_today_and_make_a_difference">Donate Today and Make a Difference</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+</resources>

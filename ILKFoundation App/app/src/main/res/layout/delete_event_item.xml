@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/ivEvent"
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/default_image"/>
+
+    <!-- Container to hold the event name and date -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvEventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Name"
+        android:textSize="19dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvEventDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Event Date"
+        android:textSize="16dp"
+        android:textColor="@color/black"/>
+
+    </FrameLayout>
+</FrameLayout>

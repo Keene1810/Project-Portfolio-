@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- Top Banner Section -->
+    <FrameLayout
+        android:id="@+id/bannerImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:importantForAccessibility="no">
+
+        <ImageView
+            android:layout_width="490dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ilk_foundation"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="182dp"
+            android:background="@color/mercury">
+
+            <!-- Cardview to give rounded corners for the image -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="330dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/mercury"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="225dp"
+                android:src="@drawable/homepagebgtwo"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+    </FrameLayout>
+    <!-- About Us Button positioned on top of the banner image -->
+
+    <!-- Icons with TextViews Section -->
+
+<!--    <Button-->
+<!--        android:id="@+id/aboutUsButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="95dp"-->
+<!--        android:backgroundTint="@android:color/darker_gray"-->
+<!--        android:text="@string/about_us"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/bannerImage"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/bannerImage"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/bannerText" />-->
+
+        <LinearLayout
+            android:id="@+id/iconsSection"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:baselineAligned="false"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:layout_marginTop="370dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Icon 1 with Text -->
+            <LinearLayout
+                android:id="@+id/icon1Section"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon1Image"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/coloured_sponsor_icon" />
+
+                <TextView
+                    android:id="@+id/icon1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/donate"
+                    android:textAlignment="center"
+                    android:textColor="@color/sushi"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/icon1Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_us_out_by_donating_now"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Icon 2 with Text -->
+            <LinearLayout
+                android:id="@+id/icon2Section"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon2Image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/colour_volunteer_icon" />
+
+                <TextView
+                    android:id="@+id/icon2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/volunteer"
+                    android:textAlignment="center"
+                    android:textColor="@color/old_copper"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/icon2Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/volunteer_now_to_make_a_difference"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Icon 3 with Text -->
+            <LinearLayout
+                android:id="@+id/icon3Section"
+                android:layout_marginTop="3.5dp"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon3Image"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/colour_donate_icon" />
+
+                <TextView
+                    android:id="@+id/icon3Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sponsor"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/icon3Description"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sponser us to help us grow"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    <!-- Centered TextViews Below the Last Icon -->
+
+        <!-- Container for Our Objectives section -->
+
+        <LinearLayout
+            android:id="@+id/centeredTextSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconsSection">
+
+            <TextView
+                android:id="@+id/missionText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Mission"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/missionText2"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Our mission is to break the cycle of poverty driven
+by poor literacy, limited opportunities, and untapped potential, enhancing the lives
+of children, families, and communities."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/centeredTextSection">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/gorse">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Our Impact and Initiatives"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:layout_marginBottom="1dp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <!-- Image 1 with Text -->
+            <ImageView
+                android:id="@+id/verticalImage1"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="35dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/image_kids_one" />
+
+            <TextView
+                android:id="@+id/verticalTextimage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Providing Nutritious Food for Children:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="We cultivate food to ensure children receive healthy meals, supporting their growth and education."
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+
+                        <!-- Image 2 with Text -->
+            <ImageView
+                android:id="@+id/verticalImage2"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/image_kids_three" />
+
+            <TextView
+                android:id="@+id/verticalTextimage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Educating Young Children"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="We provide schooling to young children, building a strong foundation for their learning and future success."
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <!-- Image 3 with Text -->
+
+
+            <ImageView
+                android:id="@+id/verticalImage4"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/image_jobs" />
+
+            <TextView
+                android:id="@+id/verticalTextimage4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creating Job Opportunities"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="We employ community members to grow food and sew clothing, providing employment and income."
+                android:textSize="16sp"
+                android:textAlignment="center"
+                />
+
+            <ImageView
+                android:id="@+id/verticalImage3"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/image_kids_two" />
+
+            <TextView
+                android:id="@+id/verticalTextimage3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teaching Valuable Skills"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="We offer training in sewing and agriculture, empowering individuals with practical skills they can use for future opportunities and self-sufficiency."
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="30dp"/>
+
+            <ImageView
+                android:id="@+id/bottomImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/maps_image"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <!-- Bottom Banner -->
+            <LinearLayout
+                android:id="@+id/bottomBanner"
+                android:layout_width="412dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="57dp"
+                android:background="@color/mercury"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/bottomBannerImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/logoilk"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/bottomBannerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/for_any_inquiries_please_contact_us_at_nvolunteer_ilkfoundation_com"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,132 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#F9E26D"
+    tools:context=".AboutUs">
+
+    <!-- Logo with shadow and padding for elevation -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/logoCard"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/foundation_logo" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Section Title: "Our Mission" -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Our Mission"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Yellow Divider Line to add a touch of color -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="64dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/mustard"
+        app:layout_constraintTop_toBottomOf="@id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mission statement card with natural accent -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/missionCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="24dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our mission is rooted in poverty alleviation and literacy development. We aim to increase earning opportunities, improve the nutrition of children, and support communities in becoming self-sufficient, productive, and empowered. By breaking the chains of poverty, lack of opportunity, and unrealized potential, we are dedicated to improving the lives of children, families, and communities for generations to come."
+                android:textColor="#2C1810"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:lineSpacingExtra="4dp"
+                android:letterSpacing="0.02"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/privacyPolicyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Privacy Policy"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_privacy"
+        android:backgroundTint="#005fae"
+        app:layout_constraintTop_toBottomOf="@id/missionCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:iconTint="@null"
+        app:iconSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="8dp"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:rippleColor="@color/mustard"
+        app:strokeColor="#003f7f"
+        app:strokeWidth="1dp"
+        app:elevation="4dp"
+        android:layout_marginBottom="16dp" />
+
+
+
+    <!-- WebView for Privacy Policy or other content -->
+    <WebView
+        android:id="@+id/privacyWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/privacyPolicyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonateFragment"
+    android:background="#A4C639"
+    android:id="@+id/navigation_donate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <!-- Title Image -->
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="289dp"
+            android:layout_height="178dp"
+            android:src="@drawable/donate_heart_two"
+            tools:ignore="ContentDescription" />
+
+        <!-- Heading Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/donate_today_and_make_a_difference"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/custom_donation_background"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/custom_edittext_donation"
+                android:hint="@string/enter_your_name"
+                android:padding="8dp"
+                tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+
+            <!-- Currency and Amount Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/amountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_weight="2"
+                    android:background="@drawable/custom_edittext_donation"
+                    android:hint="@string/enter_the_amount_zar"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    tools:ignore="InefficientWeight,TouchTargetSizeCheck,VisualLintTextFieldSize"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/donate_anonymously"
+                    android:textSize="17sp"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/anonymousSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+
+            <!-- Donate Button -->
+            <Button
+                android:id="@+id/donateButton"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/brown"
+                android:text="@string/donate"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:contentDescription="@string/zapper"
+                    android:src="@drawable/zapperlogo" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="15dp"
+                    android:contentDescription="@string/visa"
+                    android:src="@drawable/visa_icon_two" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:contentDescription="@string/mastercard"
+                    android:src="@drawable/mc_symbol"
+                    tools:ignore="ImageContrastCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/zapperWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>

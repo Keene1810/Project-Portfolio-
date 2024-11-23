@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EventsFragment"
+    android:id="@+id/navigation_events">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Layout for the ScrollView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- Past Events Heading -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Check out our past events!"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:paddingTop="10dp" />
+
+    <!-- Recycler View to hold the Past Events -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPastEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <!-- ImageView and TextView that will inform the user if there are no past events available -->
+        <ImageView
+            android:id="@+id/ivNoPastEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/no_events_available_icon"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvNoPastEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Past Events Available at this Time"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DDDDDD" />
+
+    <!-- Upcoming Events Heading -->
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Upcoming Events"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:paddingTop="10dp" />
+
+    <!-- Upcoming Events Images -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUpcomingEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <!-- ImageView and TextView that will inform the user if there are no upcoming events available -->
+
+        <ImageView
+            android:id="@+id/ivNoUpcomingEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/no_events_available_icon"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvNoUpcomingEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Upcoming Events Available at this Time"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"/>
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

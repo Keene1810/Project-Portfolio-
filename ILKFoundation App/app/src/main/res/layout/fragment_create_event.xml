@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".CreateEventFragment"
+    android:id="@+id/navigation_create_event">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="625dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivEvent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/create_event"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Event"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/edEventName"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:hint="Event Name"
+            android:layout_gravity="center"
+            tools:ignore="TouchTargetSizeCheck"
+            android:background="@drawable/custom_editext"
+            android:paddingStart="20dp"
+            android:inputType="text"
+            android:layout_marginTop="50dp"/>
+
+        <EditText
+            android:id="@+id/edEventDescription"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:hint="Event Description"
+            android:background="@drawable/custom_editext"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            tools:ignore="TouchTargetSizeCheck"
+            android:inputType="text"
+            android:paddingStart="20dp"/>
+
+        <EditText
+            android:id="@+id/edEventLocation"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:hint="Event Location"
+            android:background="@drawable/custom_editext"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            tools:ignore="TouchTargetSizeCheck"
+            android:inputType="text"
+            android:paddingStart="20dp"/>
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="345dp"
+            android:layout_height="60dp"
+            android:text="Select Image"
+            android:layout_marginTop="15dp"
+            android:textAllCaps="false"/>
+
+        <!-- Replaced the EditText for date with a Button to open DatePickerDialog -->
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="345dp"
+            android:layout_height="60dp"
+            android:text="Select Date"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnSelectTime"
+            android:layout_width="345dp"
+            android:layout_height="60dp"
+            android:text="Select Time"
+            android:textAllCaps="false"/>
+        <!-- Save Event button to trigger saving the data to Firebase -->
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="172.5dp"
+            android:layout_height="55dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="3dp"
+            android:text="Create"
+            android:textAllCaps="false"
+            android:backgroundTint="#ffc838"/>
+    </LinearLayout>
+
+
+</LinearLayout>

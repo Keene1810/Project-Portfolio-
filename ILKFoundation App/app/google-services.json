@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "732257799813",
+    "project_id": "ilkfoundation",
+    "storage_bucket": "ilkfoundation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732257799813:android:a9487f1cadc9a4703d63ec",
+        "android_client_info": {
+          "package_name": "com.innovisiontechnology.ilkfoundation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHeg6_BrgQjNuEjyygjV5SveV9wJkprDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

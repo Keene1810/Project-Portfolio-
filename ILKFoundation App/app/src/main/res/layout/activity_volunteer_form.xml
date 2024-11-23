@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolunteerForm"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- Layout for the scrollview -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/old_copper">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Please Fill out our Volunteer Form"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+
+        <!-- Personal Details Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/gorse">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Personal Details"
+                android:textColor="@color/black"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginRight="110dp"/>
+
+        </FrameLayout>
+
+
+        <!-- User Input Container for personal details-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp">
+
+            <EditText
+                android:id="@+id/edName"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/custom_editexttwo"
+                android:hint="@string/name"
+                android:paddingStart="15dp"
+                android:layout_marginRight="89dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edSurname"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/custom_editexttwo"
+                android:hint="Surname"
+                android:paddingStart="15dp"
+                android:layout_marginLeft="90dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edSelectDate"
+                android:layout_width="349dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/custom_editexttwo"
+                android:drawableEnd="@drawable/baseline_date_range_24"
+                android:hint="Select Date of Birth"
+                android:textSize="17dp"
+                android:textAllCaps="false"
+                android:paddingEnd="10dp"
+                android:paddingLeft="15dp"
+                android:clickable="true"
+                tools:ignore="TouchTargetSizeCheck" />
+
+                <Spinner
+                    android:id="@+id/spnrGender"
+                    android:layout_width="349dp"
+                    android:layout_height="45dp"
+                    android:inputType="none"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="110dp"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edEmail"
+                android:layout_width="350dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="165dp"
+                android:background="@drawable/custom_editexttwo"
+                android:hint="Email"
+                android:paddingStart="15dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edPhone"
+                android:layout_width="350dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="220dp"
+                android:background="@drawable/custom_editexttwo"
+                android:hint="Phone Number"
+                android:paddingStart="15dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edAddress"
+                android:layout_width="350dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="275dp"
+                android:background="@drawable/custom_editexttwo"
+                android:hint="Address (optional)"
+                android:paddingStart="15dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </FrameLayout>
+
+        <!-- Skills and Experience Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="475dp"
+            android:background="@color/gorse">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Skills and Experience"
+                android:textColor="@color/black"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginRight="85dp"/>
+
+        </FrameLayout>
+
+
+        <!-- User input container for Skills and Experience -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp">
+
+            <TextView
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:text="Do you have any relative work or volunteer
+experience? If so, please explain:"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/edVolExperience"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/custom_editexttwo"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textSize="18dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:text="Do you have any special skills or qualifications?"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                android:gravity="left"
+                android:layout_marginTop="280dp"
+                android:layout_marginLeft="25dp"/>
+
+            <EditText
+                android:id="@+id/edSpclSkills"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="top|start"
+                android:padding="12dp"
+                android:textSize="18dp"
+                android:layout_marginTop="350dp"
+                android:background="@drawable/custom_editexttwo" />
+
+        </FrameLayout>
+
+
+        <!-- Preferences Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1100dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/gorse">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferences"
+                    android:textSize="21dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="131dp"/>
+
+            </FrameLayout>
+
+            <!-- Input container for Preferences -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:text="What type of volunteer activities are you most interested in?"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:gravity="left"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="25dp"/>
+
+                <EditText
+                    android:id="@+id/edIntrstVolunActs"
+                    android:layout_width="360dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="top|start"
+                    android:padding="12dp"
+                    android:textSize="18dp"
+                    android:inputType="textMultiLine"
+                    android:layout_marginTop="150dp"
+                    android:background="@drawable/custom_editexttwo"/>
+
+            </FrameLayout>
+        </FrameLayout>
+
+
+        <!-- Emergency Contact container-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1410dp">
+
+            <!-- Container Heading -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/gorse">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Emergency Contacts"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="21dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginLeft="13dp"/>
+
+            </FrameLayout>
+
+            <!-- Input Container -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact 1"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <EditText
+                    android:id="@+id/edEmrgCtcName"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="115dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:hint="Name"
+                    android:paddingStart="15dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/edEmrgCtcRltsp"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:hint="Relationship"
+                    android:paddingStart="15dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/edEmrgCtcNum"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="225dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:hint="Contact Number"
+                    android:paddingStart="15dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact 2"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="300dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <EditText
+                    android:id="@+id/edEmrgCtcNameTwo"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="335dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:hint="Name"
+                    android:paddingStart="15dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/edEmrgCtcRltspTwo"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="390dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:hint="Relationship"
+                    android:paddingStart="15dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/edEmrgCtcNumTwo"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="445dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:hint="Contact Number"
+                    android:paddingStart="15dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </FrameLayout>
+        </FrameLayout>
+
+
+        <!-- Health and Safety container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1920dp">
+
+            <!-- Container Heading -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/gorse">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health and Saftey"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="21dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="105dp"/>
+            </FrameLayout>
+
+            <!-- Input Container -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp">
+
+                <TextView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have any medical conditions or allergies
+we should be aware of?"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:gravity="left"
+                    android:layout_marginLeft="30dp"/>
+
+                <EditText
+                    android:id="@+id/edHealthSafety"
+                    android:layout_width="360dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/custom_editexttwo"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:textSize="18dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </FrameLayout>
+        </FrameLayout>
+
+
+        <!-- Legal and Consent Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2230dp">
+
+            <!-- Container Header -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/gorse">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Legal and Consent"
+                    android:textColor="@color/black"
+                    android:textSize="21dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="100dp"/>
+            </FrameLayout>
+
+                <!-- Input Container -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Have you ever been convicted of a crime?"
+                        android:textColor="@color/black"
+                        android:textSize="19dp"
+                        android:gravity="left"
+                        android:layout_marginLeft="30dp"/>
+
+                    <Spinner
+                        android:id="@+id/spnrCrime"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_gravity="center_horizontal"/>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="2430dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="@color/shark"/>
+
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:text="By clicking Submit you consent to a background
+check,\nyou agree to the terms and conditions and release of liability."
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_marginTop="2520dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginBottom="70dp"/>
+    </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>
